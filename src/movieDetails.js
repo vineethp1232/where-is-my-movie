@@ -34,7 +34,7 @@ function MovieDetails({movies,getWatchList,watchlist,isFromWatchlist}) {
         </div></div>
         <div className='description'>
           <div className='column1'>
-        {myMovie.youtubeTrailerVideoId ?<iframe  src={`https://www.youtube.com/embed/${myMovie.youtubeTrailerVideoId}`} frameborder="0" allowfullscreen title={myMovie.title}></iframe>:<img className="iframe" src={myMovie.backdropURLs.original}/>}
+        {myMovie.youtubeTrailerVideoId ?<iframe  src={`https://www.youtube.com/embed/${myMovie.youtubeTrailerVideoId}`} frameborder="0" allowfullscreen title={myMovie.title}></iframe>:<img className="iframe" src={myMovie.backdropURLs.original} alt={myMovie.title}/>}
 
         </div>
         <div className='column2'>
@@ -51,7 +51,7 @@ function MovieDetails({movies,getWatchList,watchlist,isFromWatchlist}) {
         </div>
         </div>
         </div></div> 
-        {isFromWatchlist==false && <div className='related'>
+        {isFromWatchlist===false && <div className='related'>
           <h3 className='related-text'>Results</h3>
           <div className='newCard'>
           <Card data={movies.result} linkRoute="/movies"/>
