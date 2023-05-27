@@ -8,7 +8,7 @@ function Home({searchMovie,getMovies,movies}) {
     if (savedMovies) {
       getMovies(savedMovies);
     }
-  }, []);
+  }, [getMovies]);
 
   useEffect(() => {
     searchMovie && fetch(`https://streaming-availability.p.rapidapi.com/v2/search/title?title=${searchMovie}&country=In&show_type=movie&output_language=en`, {
@@ -24,8 +24,8 @@ function Home({searchMovie,getMovies,movies}) {
       localStorage.setItem('movies', JSON.stringify(data));
     })
     .catch(error => console.error(error));
-  }, [searchMovie]);
-  
+  }, [searchMovie,getMovies]);
+
   
   return (
     <div className='cards'>
