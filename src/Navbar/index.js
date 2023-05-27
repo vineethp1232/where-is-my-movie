@@ -9,7 +9,7 @@ function Index({ handleSearch, watchlist }) {
   }
   function getSearch() {
     handleSearch(search)
-
+     setSearch("")
   }
   return (
     <div className='nav'>
