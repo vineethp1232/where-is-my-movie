@@ -20,10 +20,10 @@ function Index({ handleSearch, watchlist }) {
           <button onClick={getSearch} type="submit" className='search'><Link to="/">search</Link></button>
         </div>
         <Link to="/watchlist"><div className='watchlist_container'>
-          <span class="material-symbols-rounded" id="watchlist">
+          <span className="material-symbols-rounded" id="watchlist">
             desktop_windows</span>
           {watchlist.length!==0 &&<div className='watch-length'>{watchlist.length}</div>}
-          <div class="watchlist-text">watchlist</div>
+          <div className="watchlist-text">watchlist</div>
         </div></Link>
       
     </div>

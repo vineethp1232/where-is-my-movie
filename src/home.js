@@ -8,10 +8,10 @@ function Home({searchMovie,getMovies,movies}) {
     if (savedMovies) {
       getMovies(savedMovies);
     }
-  }, [getMovies]);
+  },[getMovies]);
 
   useEffect(() => {
-    searchMovie && fetch(`https://streaming-availability.p.rapidapi.com/v2/search/title?title=${searchMovie}&country=In&show_type=movie&output_language=en`, {
+    searchMovie!==null && fetch(`https://streaming-availability.p.rapidapi.com/v2/search/title?title=${searchMovie}&country=In&show_type=movie&output_language=en`, {
       method: 'GET',headers: {
         'content-type': 'application/octet-stream',
         'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
@@ -24,7 +24,7 @@ function Home({searchMovie,getMovies,movies}) {
       localStorage.setItem('movies', JSON.stringify(data));
     })
     .catch(error => console.error(error));
-  }, [searchMovie,getMovies]);
+  },[searchMovie,getMovies]);
 
   
   return (

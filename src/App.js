@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useCallback} from "react";
 import Navbar from "./Navbar";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Watchlist from "./Navbar/watchlist";
@@ -37,9 +37,9 @@ function App() {
     localStorage.removeItem("movieData");
   }
 
-  function getMovies(data) {
+  const getMovies = useCallback((data) => {
     setMovies(data);
-  }
+  }, []);
 
   const filteredMovies = [];
   const imdbids = {};
