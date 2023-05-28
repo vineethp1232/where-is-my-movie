@@ -34,7 +34,7 @@ function App() {
 
   function handleSearch(movie) {
     setSearchMovie(movie);
-    localStorage.removeItem("movieData");
+    localStorage.removeItem("movies");
   }
 
   const getMovies = useCallback((data) => {
@@ -58,7 +58,7 @@ function App() {
         <Route
           exact
           path="/"
-          element={<Home searchMovie={searchMovie} getMovies={getMovies} movies={movies} />}
+          element={<Home searchMovie={searchMovie} getMovies={getMovies} movies={movies} handleSearch={handleSearch}/>}
         />
         <Route
           exact

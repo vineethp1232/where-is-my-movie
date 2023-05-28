@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "./card";
 import "./home.css";
-function Home({ searchMovie, getMovies, movies, handleSearch }) {
+function Home({ searchMovie, getMovies, movies }) {
   useEffect(() => {
     const savedMovies = JSON.parse(localStorage.getItem("movies"));
     if (savedMovies) {
@@ -10,7 +10,7 @@ function Home({ searchMovie, getMovies, movies, handleSearch }) {
   }, [getMovies]);
 
   useEffect(() => {
-    if (searchMovie !== null){
+    if(searchMovie!==""){
       fetch(
         `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${searchMovie}&country=In&show_type=movie&output_language=en`,
         {
