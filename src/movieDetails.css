@@ -66,7 +66,7 @@
   .details {
   
     padding: 30vh 0 0 20vw;
-    display: flex;
+    
     
   }
     .title1 {
@@ -75,6 +75,7 @@
       margin-bottom:5vh;
       position: relative;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      padding-bottom: 1vh;
     }
       .genre {
         
@@ -91,14 +92,14 @@
     
   
     .title2 {    
-      color: #C7C1BA;
+      color:#E0E0E0;
       font-size:2vw;    
       font-weight: 300;
       margin-bottom:2vh;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .rating{
-    
+    color:#E0E0E0;
             margin-left:0.5vw;
           margin-top:43vh ;
     }
@@ -108,7 +109,7 @@
         height: 90vh;
         font-size: 1.5vw;
         line-height: 26px;
-        color: #B1B0AC;
+        color:white;
         margin-top: 2vh;
       }
       .column1 {
@@ -187,7 +188,7 @@ iframe, .iframe{
   margin-left: 2vw;
 }
 .year{
-  color: #A9A8A3;
+  color: #E0E0E0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -195,8 +196,19 @@ iframe, .iframe{
 #watchNow{
   background-color: rgba(255, 255, 255, 0.2); 
   width:30vw;
-  margin-left: 10vw;
-  margin-top: 20vh;
-  margin-right: 1vw;
+  margin-left:23vw;
+  margin-bottom: 15vh;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.watch{
+  display: flex;
+  margin-bottom: 3vh;
+}
+.detail_watch{
+  width:30vw;
+}
+#watchNow:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  color:black
+
 }
