@@ -66,6 +66,7 @@
   .details {
   
     padding: 30vh 0 0 20vw;
+    display: flex;
     
   }
     .title1 {
@@ -187,5 +188,15 @@ iframe, .iframe{
 }
 .year{
   color: #A9A8A3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+#watchNow{
+  background-color: rgba(255, 255, 255, 0.2); 
+  width:30vw;
+  margin-left: 10vw;
+  margin-top: 20vh;
+  margin-right: 1vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
