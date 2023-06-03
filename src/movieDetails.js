@@ -44,7 +44,7 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
                   </p>
                 </div>
                 {myMovie.streamingInfo.in && Object.keys(myMovie.streamingInfo.in).length > 0 ? (
-  <a href={Object.values(myMovie.streamingInfo.in)[Object.keys(myMovie.streamingInfo.in).length > 1 ? 1 : 0][0].watchLink} target="_blank" rel="noopener noreferrer">
+  <a href={Object.values(myMovie.streamingInfo.in)[Object.keys(myMovie.streamingInfo.in).length > 1 ? 1 : 0][0].link} target="_blank" rel="noopener noreferrer">
     <button className="button2" id="watchNow">Watch on {Object.keys(myMovie.streamingInfo.in)[Object.keys(myMovie.streamingInfo.in).length > 1 ? 1 : 0]}</button>
   </a>
 ) : (
