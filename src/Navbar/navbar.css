@@ -32,7 +32,7 @@ a{
   border-radius: 10px;
   background-color:black;
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
 }
 
 .material-symbols-rounded {
@@ -59,7 +59,6 @@ a{
 }
 
 .watchlist-text {
-
   color:grey;
   text-align: center;
 }
@@ -69,7 +68,6 @@ a{
   position: absolute;
   top: -1.5rem;
   left: -0.5rem;
-  background-color:blue;
   color: #fff;
   padding: 0.5rem;
   font-size: 1rem;
