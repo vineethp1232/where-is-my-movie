@@ -100,8 +100,9 @@
     }
     .rating{
     color:#E0E0E0;
-            margin-left:0.5vw;
+            
           margin-top:43vh ;
+          font-size: 1vw;
     }
     .description {
         display: flex;
@@ -196,13 +197,15 @@ iframe, .iframe{
 #watchNow{
   background-color: rgba(255, 255, 255, 0.2); 
   width:30vw;
-  margin-left:23vw;
-  margin-bottom: 15vh;
+  margin-left:20vw;
+
+  margin-right: 10vw;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .watch{
   display: flex;
   margin-bottom: 3vh;
+  
 }
 .detail_watch{
   width:30vw;

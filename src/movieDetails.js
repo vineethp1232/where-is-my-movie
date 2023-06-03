@@ -24,11 +24,12 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
               <div className="title1">{myMovie.title}</div>
 
               <div className="title2">{myMovie.tagline}</div>
-              <h3 className="year">
-                {myMovie.year}, {myMovie.directors[0]}
-              </h3>
+              
               <div className="watch">
                 <div className="detail_watch">
+                <h3 className="year">
+                {myMovie.year}, {myMovie.directors[0]}
+              </h3>
                   <span className="rating">
                     IMDB rating {myMovie.imdbRating}/100
                   </span>
@@ -42,58 +43,15 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
                     })}
                   </p>
                 </div>
-                {myMovie.streamingInfo.in &&
-                Object.keys(myMovie.streamingInfo.in).length > 0 ? (
-                  <div>
-                    {myMovie.streamingInfo.in.hotstar && (
-                      <a
-                        href={myMovie.streamingInfo.in.hotstar[0].link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="button2" id="watchNow">
-                          Watch on Hotstar
-                        </button>
-                      </a>
-                    )}
-                    {myMovie.streamingInfo.in.prime && (
-                      <a
-                        href={myMovie.streamingInfo.in.prime[0].link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="button2" id="watchNow">
-                          Watch on prime video
-                        </button>
-                      </a>
-                    )}
-                    {myMovie.streamingInfo.in.netflix && (
-                      <a
-                        href={myMovie.streamingInfo.in.netflix[0].link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="button2" id="watchNow">
-                          Watch on Netflix
-                        </button>
-                      </a>
-                    )}
-                    {myMovie.streamingInfo.in.apple && (
-                      <a
-                        href={myMovie.streamingInfo.in.apple[0].link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <button className="button2" id="watchNow">
-                          Watch on Apple
-                        </button>
-                      </a>
-                    )}
-                    {/* Render other platforms in a similar way */}
-                  </div>
-                ) : (
-                  <p></p>
-                )}
+                {myMovie.streamingInfo.in && Object.keys(myMovie.streamingInfo.in).length > 0 ? (
+  <a href={Object.values(myMovie.streamingInfo.in)[Object.keys(myMovie.streamingInfo.in).length > 1 ? 1 : 0][0].watchLink} target="_blank" rel="noopener noreferrer">
+    <button className="button2" id="watchNow">Watch on {Object.keys(myMovie.streamingInfo.in)[Object.keys(myMovie.streamingInfo.in).length > 1 ? 1 : 0]}</button>
+  </a>
+) : (
+  <p></p>
+)}
+
+
               </div>
             </div>
           </div>
