@@ -59,7 +59,7 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
             <div className="column1">
               {myMovie.youtubeTrailerVideoId ? (
                 <iframe
-                  src={`https://www.youtube.com/embed/${myMovie.youtubeTrailerVideoId}`}
+                  src={`https://www.youtube.com/embed/${myMovie.youtubeTrailerVideoId}?autoplay=1`}
                   frameBorder="0"
                   allowFullScreen
                   title={myMovie.title}
