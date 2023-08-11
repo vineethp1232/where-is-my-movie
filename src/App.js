@@ -6,7 +6,7 @@ import Home from "./home";
 import MovieDetails from "./movieDetails";
 
 function App() {
-  const [searchMovie, setSearchMovie] = useState("");
+  const [searchMovie, setSearchMovie] = useState("spiderman");
   const [movies, setMovies] = useState(null);
   const [watchlist, setWatchlist] = useState(
     JSON.parse(localStorage.getItem("watchlist")) || []
