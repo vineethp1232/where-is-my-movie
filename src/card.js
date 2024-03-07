@@ -5,7 +5,7 @@ function Card(props) {
      
     const element = props.data.map((item,index)=>{
         const backgroundImage =item.backdropURLs[780]
-       return(<Link to={`${props.linkRoute}/${index}`}> <div className='card' style={{backgroundImage:`url(${backgroundImage})`}} >
+       return(<Link to={`${props.linkRoute}/${item.imdbId}`}> <div className='card' style={{backgroundImage:`url(${backgroundImage})`}} >
             <div className='card-content' >
                 <div className='icons'>
             <img src={item.posterURLs[92]} alt="" className='img'></img>

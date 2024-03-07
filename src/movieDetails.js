@@ -4,8 +4,8 @@ import Card from "./card";
 import "./movieDetails.css";
 function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
   const { id } = useParams();
-
-  const myMovie = isFromWatchlist ? watchlist[id] : movies.result[id];
+  const myMovieList = isFromWatchlist ? watchlist : movies.result;
+  const myMovie=myMovieList.filter(item=>item.imdbId===id)[0]
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
