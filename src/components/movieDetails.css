@@ -10,7 +10,7 @@
   .container {
     margin: 0 auto;
     width:100%;
-    height:100vh;
+    height:550px;
     background: #F0F0ED;
     border-radius: 5px;
     position: relative;
@@ -19,7 +19,7 @@
   }
   
   .hero {
-    height:68vh;  
+    height:385px;  
     width:100%;
     margin:0;
     position: relative;
@@ -59,23 +59,23 @@
   }
   .cover {
     position: absolute;
-    top:28vh;
+    top:160px;
     left:3vw;
     z-index: 2;
   }
   .details {
   
-    padding: 30vh 0 0 20vw;
+    padding: 160px 0 0 20vw;
     
     
   }
     .title1 {
       color: white;
       font-size: 4vw;
-      margin-bottom:5vh;
+      margin-bottom:25px;
       position: relative;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      padding-bottom: 1vh;
+      padding-bottom: 5px;
     }
       .genre {
         
@@ -95,35 +95,35 @@
       color:#E0E0E0;
       font-size:2vw;    
       font-weight: 300;
-      margin-bottom:2vh;
+      margin-bottom:10px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     .rating{
     color:#E0E0E0;
             
-          margin-top:43vh ;
+          margin-top:215px ;
           font-size: 1vw;
     }
     .description {
         display: flex;
         bottom: 0px;
-        height: 90vh;
+        height: 460px;
         font-size: 1.5vw;
         line-height: 26px;
         color:white;
-        margin-top: 2vh;
+        margin-top: 10px;
       }
       .column1 {
     
         float: left;
         text-align: center;
         margin-left: 2vw;
-        padding-top: 10vh;
+        padding-top: 50px;
       }
       .column2 {
         float: left;
         padding-left: 10vw;
-        padding-top: 6vh;
+        padding-top: 30px;
       }
       .cast{
         color: #B1B0AC;
@@ -144,20 +144,21 @@
   font-size: 1.5vw;
   font-weight: 600;
   line-height: normal;
-  min-height:4vh;
+  min-height:22px;
   min-width: 0;
   outline: none;
-  padding: 2vh 2vw;
+  padding: 12px 2vw;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 50%;
+  width: 30%;
   will-change: transform;
   margin-right: 1vw;
   margin-top: 2vw;
+  
 }
 
 .button2:disabled {
@@ -175,15 +176,15 @@
 }
 iframe, .iframe{
     width:40vw;
-    height:50vh
+    height:300px
 }
 .cover{
     width:15vw;
-    height:45vh;
+    height:260px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .related{
-  margin-top:50vh;
+  margin-top:250px;
 }
 .related-text{
   margin-left: 2vw;
@@ -204,7 +205,7 @@ iframe, .iframe{
 }
 .watch{
   display: flex;
-  margin-bottom: 3vh;
+  margin-bottom: 10px;
   
 }
 .detail_watch{
@@ -215,3 +216,13 @@ iframe, .iframe{
   color:black
 
 }
+
+.watchlist-button{
+  position: absolute;
+ right:205px;
+ bottom:-220px;
+}
+.detail-button-container{
+  position: relative;
+}
+

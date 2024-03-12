@@ -36,7 +36,7 @@ function Home({ searchMovie, getMovies, movies }) {
         .catch((error) => console.error(error))
         .finally(() => setLoading(false)); // Set loading to false when API call completes
     }
-  }, [searchMovie, getMovies]);
+  }, [searchMovie,getMovies]);
 
   return (
     <div className="cards">

@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-   height:15vh;
+   height:80px;
    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,.2); */
 }
 
@@ -21,7 +21,7 @@ a{
 .search-box{
   border-radius: 5px;
   width:35vw;
-  height:6vh;
+  height:40px;
   margin-right: 1vw;
   background-color:#303030;
   color:white;
@@ -45,13 +45,13 @@ a{
 }
 .watch-length {
   position: relative; /* Added */
-  top: -5vh;
+  top: -28px;
   right: -1vw;
   background-color: red;
   color: white;
   font-size: 1vw;
   width: 1.5vw;
-  height: 2.5vh;
+  height: 16px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@ a{
 .watchlist_container{
   display: flex;
   flex-direction: column;
-  padding-top: 2vh;
+  padding-top: 10px;
   align-items: center;
   justify-content: center;
 }
