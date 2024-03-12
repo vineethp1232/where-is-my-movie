@@ -1,13 +1,14 @@
 import React, { useState ,useCallback} from "react";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import Watchlist from "./Navbar/watchlist";
-import Home from "./home";
-import MovieDetails from "./movieDetails";
+import Watchlist from "./components/watchlist";
+import Home from "./components/home";
+import MovieDetails from "./components/movieDetails";
+import RecommendedMovies from "./utils/Recommended";
 
 function App() {
-  const [searchMovie, setSearchMovie] = useState("spiderman");
-  const [movies, setMovies] = useState(null);
+  const [searchMovie, setSearchMovie] = useState("");
+  const [movies, setMovies] = useState(RecommendedMovies);
   const [watchlist, setWatchlist] = useState(
     JSON.parse(localStorage.getItem("watchlist")) || []
   );
@@ -63,7 +64,7 @@ function App() {
         <Route
           exact
           path="/watchlist"
-          element={<Watchlist watchlist={watchlist} movies={movies} getWatchList={getWatchList} filteredMovies={filteredMovies} />}
+          element={<Watchlist  filteredMovies={filteredMovies} />}
         />
         <Route
           exact
@@ -78,5 +79,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

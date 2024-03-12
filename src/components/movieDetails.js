@@ -14,7 +14,7 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
     <div className="top">
       <div className="movie-card">
         <div className="container">
-          <img src={myMovie.posterURLs.original} alt="cover" class="cover" />
+          <img src={myMovie.posterURLs.original} alt="cover" className="cover" />
           <div className="background"></div>
           <div
             className="hero"
@@ -36,7 +36,7 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
                   <p>
                     {myMovie.genres.map((genre) => {
                       return (
-                        <span style={{ paddingRight: "1vw" }} className="genre">
+                        <span style={{ paddingRight: "1vw" }} className="genre" key={genre.id}>
                           {genre.name}
                         </span>
                       );
@@ -76,8 +76,8 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
               <p>{myMovie.overview}</p>
               <div className="cast">
                 cast:{" "}
-                {myMovie.cast.map((item) => {
-                  return <span>{item} | </span>;
+                {myMovie.cast.map((item,index) => {
+                  return <span key={index}>{item} | </span>;
                 })}
               </div>
               <div className="buttons">
@@ -98,7 +98,7 @@ function MovieDetails({ movies, getWatchList, watchlist, isFromWatchlist }) {
       </div>
       {isFromWatchlist === false && (
         <div className="related">
-          <h3 className="related-text">Results</h3>
+          <h3 className="related-text">Related Films</h3>
           <div className="newCard">
             <Card data={movies.result} linkRoute="/movies" />
           </div>

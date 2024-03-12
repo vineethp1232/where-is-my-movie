@@ -1,7 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./card";
 import "./home.css";
+import Shimmer from "./Shimmer";
+
+
 function Home({ searchMovie, getMovies, movies }) {
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const savedMovies = JSON.parse(localStorage.getItem("movies"));
     if (savedMovies) {
@@ -10,7 +15,8 @@ function Home({ searchMovie, getMovies, movies }) {
   }, [getMovies]);
 
   useEffect(() => {
-    if(searchMovie!==""){
+    if (searchMovie !== "") {
+      setLoading(true); // Set loading to true when starting a new search
       fetch(
         `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${searchMovie}&country=In&show_type=movie&output_language=en`,
         {
@@ -27,13 +33,20 @@ function Home({ searchMovie, getMovies, movies }) {
           getMovies(data);
           localStorage.setItem("movies", JSON.stringify(data));
         })
-        .catch((error) => console.error(error));
-  }}, [searchMovie, getMovies]);
+        .catch((error) => console.error(error))
+        .finally(() => setLoading(false)); // Set loading to false when API call completes
+    }
+  }, [searchMovie, getMovies]);
 
   return (
     <div className="cards">
-      {movies && <h2>Results</h2>}
-      {movies && <Card data={movies.result} linkRoute="/movies" />}
+      {loading ? <Shimmer /> :
+      <div>
+      <h2>{movies.result.length===10?"Recommended Movies":"Results"}</h2>
+       <Card data={movies.result} linkRoute="/movies" />
+       </div>
+       } 
+      
     </div>
   );
 }
